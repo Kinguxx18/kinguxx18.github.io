@@ -3,11 +3,11 @@
  * Modular architecture with ES6 modules
  */
 
-import { ThemeManager } from './modules/theme.js';
-import { NavigationManager } from './modules/navigation.js';
-import { FormManager } from './modules/form.js';
-import { ProjectsManager } from './modules/projects.js';
-import { ScrollManager } from './modules/scroll.js';
+import { ThemeManager } from 'modules/theme.js';
+import { NavigationManager } from 'modules/navigation.js';
+import { FormManager } from 'modules/form.js';
+import { ProjectsManager } from 'modules/projects.js';
+import { ScrollManager } from 'modules/scroll.js';
 
 (function() {
     'use strict';
