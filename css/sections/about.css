@@ -1,0 +1,58 @@
+/* =========================================
+    ABOUT SECTION
+    ========================================= */
+.about-container {
+    max-width: 900px;
+}
+
+.about-card {
+    background: linear-gradient(135deg, var(--card) 0%, var(--bg-lighter) 100%);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-content {
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-text {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+}
+
+.about-text strong {
+    color: var(--text);
+}
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+.about-stat {
+    text-align: center;
+}
+
+.stat-number-large {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-stat .stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

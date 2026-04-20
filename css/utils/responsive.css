@@ -1,0 +1,153 @@
+/* =========================================
+    RESPONSIVE DESIGN
+    ========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Topbar fixed in mobile - outside sidebar */
+    .topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: var(--bg-sidebar);
+        border-bottom: 1px solid var(--border);
+        z-index: 1001;
+        padding: 0 var(--spacing-md);
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Hide topbar when it's inside the sidebar (fallback) */
+    .sidebar .topbar {
+        display: none;
+    }
+
+    /* Show hamburger menu button */
+    .menu-toggle {
+        display: flex !important;
+    }
+
+    .topbar-actions {
+        gap: 0.25rem;
+    }
+
+    /* Sidebar slides in from left */
+    .sidebar {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        height: calc(100vh - 70px);
+        width: 260px;
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        z-index: 1000;
+        box-shadow: var(--shadow-xl);
+        background: var(--bg-sidebar);
+        border-right: 1px solid var(--border);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Only show nav text when menu is open */
+    .sidebar.open nav span,
+    .sidebar.open .sidebar-footer span {
+        display: inline;
+    }
+
+    /* Hide nav text when menu is closed */
+    .sidebar:not(.open) nav span,
+    .sidebar:not(.open) .sidebar-footer span {
+        display: none;
+    }
+
+    .sidebar nav {
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        justify-content: flex-start;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-icon {
+        font-size: 1.1rem;
+    }
+
+    .sidebar-footer {
+        padding: var(--spacing-md);
+    }
+
+    /* Content with padding for fixed topbar */
+    .content {
+        margin-left: 0;
+        padding-top: 80px;
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+    }
+
+    /* Overlay when menu is open */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
